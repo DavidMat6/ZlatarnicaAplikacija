@@ -1,0 +1,20 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZlatarnicaAplikacija.PocetnaStranica"
+             Title="Proizvodi">
+    <VerticalStackLayout Padding="10">
+        <CollectionView x:Name="PopisProizvoda" SelectionMode="Single" SelectionChanged="Odabrano">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="5" BorderColor="Gray">
+                        <StackLayout>
+                            <Image Source="{Binding Slika}" HeightRequest="120"/>
+                            <Label Text="{Binding Naziv}" FontAttributes="Bold" />
+                            <Label Text="{Binding Cijena, StringFormat='{0} €'}" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

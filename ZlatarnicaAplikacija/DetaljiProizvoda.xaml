@@ -1,0 +1,14 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZlatarnicaAplikacija.DetaljiProizvodaStranica"
+             Title="Detalji proizvoda">
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Image x:Name="SlikaProizvoda" HeightRequest="200"/>
+            <Label x:Name="NazivProizvoda" FontSize="24" FontAttributes="Bold" />
+            <Label x:Name="OpisProizvoda" />
+            <Label x:Name="CijenaProizvoda" FontSize="18"/>
+            <Button Text="Dodaj u košaricu" Clicked="DodajUKosaricu"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

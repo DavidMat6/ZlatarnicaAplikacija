@@ -1,0 +1,26 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZlatarnicaAplikacija.KosaricaStranica"
+             Title="Košarica">
+    <VerticalStackLayout Padding="10">
+        <CollectionView x:Name="PopisKosarice">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Obriši" BackgroundColor="Red"
+                                           Invoked="ObrisiStavku"/>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <Grid Padding="10">
+                            <Label Text="{Binding Proizvod.Naziv}" />
+                            <Label Text="{Binding Kolicina}" HorizontalOptions="EndAndExpand" />
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Text="Dovrši kupnju" Clicked="DovrsiKupnju"/>
+    </VerticalStackLayout>
+</ContentPage>
